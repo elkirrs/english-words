@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="words-list/units/unit-1.js"></script>
+    <script src="words-list/units/unit-2.js"></script>
+    <script src="words-list/units/unit-3.js"></script>
+    <script src="words-list/units/unit-4.js"></script>
+    <script src="words-list/units/unit-5.js"></script>
+    <script src="words-list/units/unit-6.js"></script>
+    <script src="words-list/units/unit-7.js"></script>
+    <script src="words-list/units/unit-8.js"></script>
+    <script src="words-list/units/unit-9.js"></script>
+    <script src="words-list/units/unit-10.js"></script>
+    <script src="words-list/units/unit-11.js"></script>
+    <script src="words-list/units/unit-12.js"></script>
+    <script src="words-list/partOfSpeech.js"></script>
+    <script src="words-list/irregularVerbs/part1.js"></script>
+    <script src="words-list/words.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Words list</a></li>
+            <li><a href="verbs.html" class="nav-link">Verbs list</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div id="main-content" class="main-content">
+        <div class="quiz-container">
+            <h1>Words Quiz</h1>
+            <div id="settings" class="select-container">
+                <div class="">
+                    <label for="unit-select" class="label-style">Select unit:</label>
+                    <div class="custom-multiselect">
+                        <select id="unit-select" multiple size="5">
+                        </select>
+                    </div>
+                    <p class="instruction">Press <b>Ctrl</b> (or <b>Cmd</b> for Mac), to select multiple units.</p>
+                </div>
+                <div class="pt-15">
+                    <label for="direction-select" class="label-style">The direction of the translation of words:</label>
+                    <select id="direction-select" class="select-css">
+                        <option value="ru-en">Russian to English</option>
+                        <option value="en-ru">English to Russian</option>
+                    </select>
+                </div>
+
+                <div class="pt-15">
+                    <label for="mode-select" class="label-style">Select the mode:</label>
+                    <select id="mode-select" class="select-css">
+                        <option value="manual-input">Manual input</option>
+                        <option value="multiple-choice">Selection from the lists</option>
+                    </select>
+                </div>
+
+                <button id="start-button">Start</button>
+            </div>
+
+            <div id="question-container" style="display: none;">
+                <p id="word-display">Loading...</p>
+                <div id="options-container" class="options-container"></div>
+                <div id="manual-input">
+                    <label for="user-input"></label>
+                    <input type="text" id="user-input" class="text-field__input"
+                           placeholder="Enter the translation of the word..."/>
+                    <button id="submit-button">To answer</button>
+                </div>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <div id="log-container" class="log-container display-none">
+        <div>
+            <span id="total" class="total tooltip" title="Total">0</span> |
+            <span id="remained" class="remained tooltip" title="Remained">0</span> |
+            <span id="incorrect" class="incorrect tooltip" title="Incorrect">0</span> |
+            <span id="correct" class="correct tooltip" title="Correct">0</span>
+        </div>
+        <h4>Answer</h4>
+        <ul id="log-list" class="log-list"></ul>
+    </div>
+
+    <div id="table-words-container" class="pt-30 content-center display-none">
+        <div class="table-container">
+            <table id="table-words" class="custom-table">
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
